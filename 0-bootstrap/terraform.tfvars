@@ -1,0 +1,5 @@
+org_id = "190819591142"
+billing_account = "0159E6-7CC081-3C8C60"
+group_org_admins = "gcp-organization-admins@dataminded.be"
+group_billing_admins = "gcp-billing-admins@dataminded.be"
+default_region = "europe-west1"

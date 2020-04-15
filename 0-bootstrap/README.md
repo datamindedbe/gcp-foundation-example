@@ -13,6 +13,9 @@ Further details of permissions required and resources created, can be found in t
 
 ## Usage
 
+1. set GOOGLE_APPLICATION_CREDENTIALS env variable
+    1. run `gcloud auth application-default-login`
+    2. point GOOGLE_APPLICATION_CREDENTIALS env variable to `json` file created above
 1. Change into 0-bootstrap folder
 1. Copy tfvars by running `cp terraform.example.tfvars terraform.tfvars` and update `terraform.tfvars` with values from your environment.
 1. Run `terraform init`
