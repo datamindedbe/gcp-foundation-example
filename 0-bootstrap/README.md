@@ -13,7 +13,7 @@ Further details of permissions required and resources created, can be found in t
 
 ## Usage
 
-1. set GOOGLE_APPLICATION_CREDENTIALS env variable
+1. set GOOGLE_APPLICATION_CREDENTIALS env variable to run under your user (non service-account) credentials
     1. run `gcloud auth application-default-login`
     2. point GOOGLE_APPLICATION_CREDENTIALS env variable to `json` file created above
 1. Change into 0-bootstrap folder
@@ -24,6 +24,7 @@ Further details of permissions required and resources created, can be found in t
 1. Copy the backend by running `cp backend.tf.example backend.tf` and update `backend.tf` with your bucket from the apply step
 1. Re-run `terraform init` agree to copy state to gcs when prompted
     1. (Optional) Run `terraform apply` to verify state is configured correctly
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
