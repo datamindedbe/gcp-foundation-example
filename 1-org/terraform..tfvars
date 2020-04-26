@@ -14,16 +14,8 @@
  * limitations under the License.
  */
 
-domains_to_allow = ["example.com"]
+domains_to_allow = ["dataminded.be"]
 
-billing_data_users = "gcp-billing-admins@example.com"
+billing_data_users = "gcp-billing-admins@dataminded.be" #TODO duplicate of `group_billing_admins` in universal
 
-audit_data_users = "gcp-security-admins@example.com"
-
-org_id = "000000000000"
-
-billing_account = "000000-000000-000000"
-
-terraform_service_account = "org-terraform@example-project-2334.iam.gserviceaccount.com"
-
-default_region = "australia-southeast1"
+terraform_service_account = "org-terraform@gcp-foundation-seed-e042.iam.gserviceaccount.com"
