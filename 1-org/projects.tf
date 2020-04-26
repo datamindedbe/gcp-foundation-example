@@ -19,15 +19,15 @@
 *****************************************/
 
 module "org_audit_logs" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  default_service_account     = "depriviledge"
-  name                        = "org-audit-logs"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = google_folder.logs.id
-  activate_apis               = ["logging.googleapis.com", "bigquery.googleapis.com"]
+  source                  = "terraform-google-modules/project-factory/google"
+  version                 = "~> 7.0"
+  random_project_id       = "true"
+  default_service_account = "depriviledge"
+  name                    = "org-audit-logs"
+  org_id                  = var.org_id
+  billing_account         = var.billing_account
+  folder_id               = google_folder.logs.id
+  activate_apis           = ["logging.googleapis.com", "bigquery.googleapis.com"]
 
   labels = {
     environment      = "prod"
@@ -36,15 +36,15 @@ module "org_audit_logs" {
 }
 
 module "org_billing_logs" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  default_service_account     = "depriviledge"
-  name                        = "org-billing-logs"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = google_folder.logs.id
-  activate_apis               = ["logging.googleapis.com", "bigquery.googleapis.com"]
+  source                  = "terraform-google-modules/project-factory/google"
+  version                 = "~> 7.0"
+  random_project_id       = "true"
+  default_service_account = "depriviledge"
+  name                    = "org-billing-logs"
+  org_id                  = var.org_id
+  billing_account         = var.billing_account
+  folder_id               = google_folder.logs.id
+  activate_apis           = ["logging.googleapis.com", "bigquery.googleapis.com"]
 
   labels = {
     environment      = "prod"
@@ -57,14 +57,14 @@ module "org_billing_logs" {
 *****************************************/
 
 module "org_monitoring_nonprod" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  name                        = "org-monitoring-nonprod"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = google_folder.monitoring.id
-  activate_apis               = ["logging.googleapis.com", "monitoring.googleapis.com"]
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 7.0"
+  random_project_id = "true"
+  name              = "org-monitoring-nonprod"
+  org_id            = var.org_id
+  billing_account   = var.billing_account
+  folder_id         = google_folder.monitoring.id
+  activate_apis     = ["logging.googleapis.com", "monitoring.googleapis.com"]
 
   labels = {
     environment      = "prod"
@@ -73,14 +73,14 @@ module "org_monitoring_nonprod" {
 }
 
 module "org_monitoring_prod" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  name                        = "org-monitoring-prod"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = google_folder.monitoring.id
-  activate_apis               = ["logging.googleapis.com", "monitoring.googleapis.com"]
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 7.0"
+  random_project_id = "true"
+  name              = "org-monitoring-prod"
+  org_id            = var.org_id
+  billing_account   = var.billing_account
+  folder_id         = google_folder.monitoring.id
+  activate_apis     = ["logging.googleapis.com", "monitoring.googleapis.com"]
 
   labels = {
     environment      = "prod"
@@ -93,13 +93,13 @@ module "org_monitoring_prod" {
 *****************************************/
 
 module "org_shared_vpc_nonprod" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  name                        = "org-shared-vpc-nonprod"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = google_folder.networking.id
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 7.0"
+  random_project_id = "true"
+  name              = "org-shared-vpc-nonprod"
+  org_id            = var.org_id
+  billing_account   = var.billing_account
+  folder_id         = google_folder.networking.id
   activate_apis = [
     "compute.googleapis.com",
     "dns.googleapis.com",
@@ -115,13 +115,13 @@ module "org_shared_vpc_nonprod" {
 }
 
 module "org_shared_vpc_prod" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  name                        = "org-shared-vpc-prod"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = google_folder.networking.id
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 7.0"
+  random_project_id = "true"
+  name              = "org-shared-vpc-prod"
+  org_id            = var.org_id
+  billing_account   = var.billing_account
+  folder_id         = google_folder.networking.id
   activate_apis = [
     "compute.googleapis.com",
     "dns.googleapis.com",

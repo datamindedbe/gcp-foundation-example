@@ -16,7 +16,7 @@
 
 terraform {
   backend "gcs" {
-	bucket = "gcp-foundation-tfstate-be35"
-	prefix = "terraform/org/state"
+    bucket = "gcp-foundation-tfstate-be35"
+    prefix = "terraform/org/state"
   }
 }
