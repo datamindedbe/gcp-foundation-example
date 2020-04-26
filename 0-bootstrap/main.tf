@@ -21,13 +21,13 @@ provider "random" {
 module "seed_bootstrap" {
   source                  = "terraform-google-modules/bootstrap/google"
   version                 = "~> 1.0"
-  project_prefix = "gcp-foundation"
+  project_prefix          = "gcp-foundation"
   org_id                  = var.org_id
   billing_account         = var.billing_account
   group_org_admins        = var.group_org_admins
   group_billing_admins    = var.group_billing_admins
   default_region          = var.default_region
-  org_project_creators = ["group:team@dataminded.be"]
+  org_project_creators    = ["group:team@dataminded.be"]
   sa_enable_impersonation = true
 }
 
