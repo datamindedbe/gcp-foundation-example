@@ -18,4 +18,3 @@ domains_to_allow = ["dataminded.be"]
 
 billing_data_users = "gcp-billing-admins@dataminded.be" #TODO duplicate of `group_billing_admins` in universal
 
-terraform_service_account = "org-terraform@gcp-foundation-seed-e042.iam.gserviceaccount.com"

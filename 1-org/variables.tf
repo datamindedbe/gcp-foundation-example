@@ -24,11 +24,6 @@ variable "billing_account" {
   type        = string
 }
 
-variable "terraform_service_account" {
-  description = "Service account email of the account to impersonate to run Terraform."
-  type        = string
-}
-
 variable "default_region" {
   description = "Default region for BigQuery resources."
   type        = string
