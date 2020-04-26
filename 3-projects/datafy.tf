@@ -23,8 +23,8 @@ module "standard_project_folders" {
 module "standard_project_app" {
   source = "./modules/standard_projects"
 
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
+  org_id          = var.org_id
+  billing_account = var.billing_account
 
   nonprod_folder_id = module.standard_project_folders.nonprod_folder_id
   prod_folder_id    = module.standard_project_folders.prod_folder_id
