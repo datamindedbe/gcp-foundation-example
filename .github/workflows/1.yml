@@ -4,6 +4,7 @@ on:
 env:
   tf_version: 'latest'
   tf_working_dir: '0-bootstrap'
+  GOOGLE_APPLICATION_CREDENTIALS: ${secrets.GOOGLE_APPLICATION_CREDENTIALS}
 jobs:
   terraform:
     name: 'Terraform'
