@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: 'Checkout '
         uses: actions/checkout@master
+      # --------- prep setup gcloud ---
+      # https://github.com/terraform-google-modules/terraform-google-project-factory#software
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+
+
       # --------- Stage 0 -------------
       - name: 'init 0-bootstrap'
         uses: hashicorp/terraform-github-actions@master
