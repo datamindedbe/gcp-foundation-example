@@ -17,21 +17,20 @@
 module "standard_project_folders" {
   source              = "./modules/folder_environments"
   parent_folder_id    = google_folder.app.id
-  folder_display_name = "standard_app_example"
+  folder_display_name = "datafy"
 }
 
 module "standard_project_app" {
   source = "./modules/standard_projects"
 
-  org_id                      = var.organization_id
+  org_id                      = var.org_id
   billing_account             = var.billing_account
-  impersonate_service_account = var.terraform_service_account
 
   nonprod_folder_id = module.standard_project_folders.nonprod_folder_id
   prod_folder_id    = module.standard_project_folders.prod_folder_id
 
   # Metadata
-  project_prefix   = "sample-standard"
-  cost_centre      = "cost-centre-1"
-  application_name = "sample-standard-project-app"
+  project_prefix   = "internal"
+  cost_centre      = "datafy"
+  application_name = "datafy"
 }

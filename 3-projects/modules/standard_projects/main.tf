@@ -23,15 +23,14 @@ locals {
 }
 
 module "nonprod_project" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  impersonate_service_account = var.impersonate_service_account
-  activate_apis               = var.activate_apis
-  name                        = "${var.project_prefix}-nonprod"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = var.nonprod_folder_id
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 7.0"
+  random_project_id = "true"
+  activate_apis     = var.activate_apis
+  name              = "${var.project_prefix}-nonprod"
+  org_id            = var.org_id
+  billing_account   = var.billing_account
+  folder_id         = var.nonprod_folder_id
 
   shared_vpc         = local.nonprod_host_network.project
   shared_vpc_subnets = local.nonprod_host_network.subnetworks_self_links # Optional: To enable subnetting, to replace to "module.networking_nonprod_project.subnetwork_self_link"
@@ -44,15 +43,14 @@ module "nonprod_project" {
 }
 
 module "prod_project" {
-  source                      = "terraform-google-modules/project-factory/google"
-  version                     = "~> 7.0"
-  random_project_id           = "true"
-  impersonate_service_account = var.impersonate_service_account
-  activate_apis               = var.activate_apis
-  name                        = "${var.project_prefix}-prod"
-  org_id                      = var.org_id
-  billing_account             = var.billing_account
-  folder_id                   = var.prod_folder_id
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 7.0"
+  random_project_id = "true"
+  activate_apis     = var.activate_apis
+  name              = "${var.project_prefix}-prod"
+  org_id            = var.org_id
+  billing_account   = var.billing_account
+  folder_id         = var.prod_folder_id
 
   shared_vpc         = local.prod_host_network.project
   shared_vpc_subnets = local.prod_host_network.subnetworks_self_links # Optional: To enable subnetting, to replace to "module.networking_prod_project.subnetwork_self_link"
